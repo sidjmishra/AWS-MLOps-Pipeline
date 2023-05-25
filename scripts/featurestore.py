@@ -6,7 +6,7 @@ from sagemaker.feature_store.feature_group import FeatureGroup
 import awswrangler as wr
 
 base_dir = "/opt/ml/processing"
-bucket = "ideaaiml-demo"
+bucket = "BUCKET-NAME"
 prefix = "mlops/predictive-maintenance"
 
 boto_session = boto3.Session(region_name = "us-east-1")
@@ -18,7 +18,7 @@ try:
     sagemaker_role = sagemaker.get_execution_role()
     print(f"Sagemaker Role for Feature Store file: {sagemaker_role}")
 except ValueError:
-    sagemaker_role = 'arn:aws:iam::451633145432:role/service-role/AmazonSageMaker-ExecutionRole-20220302T144665'
+    sagemaker_role = 'SAGENAKER-ROLE'
     
 feature_store_session = sagemaker.Session(
     boto_session = boto_session,

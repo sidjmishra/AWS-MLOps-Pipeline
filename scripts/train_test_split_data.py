@@ -4,7 +4,7 @@ from io import StringIO
 import awswrangler as wr
 
 base_dir = "/opt/ml/processing"
-bucket = "ideaaiml-demo"
+bucket = "BUCKET-NAME"
 prefix = "mlops/predictive-maintenance"
 
 def upload_file_s3(df, name):
